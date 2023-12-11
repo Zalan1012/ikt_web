@@ -1,0 +1,111 @@
+<!--komment-->
+<!DOCTYPE html> <!--ez alakítja a dokumentumot HTML5-tté-->
+<html lang="hu"> <!--összefogja az egész HTML dokumentumot és itt állítom be a nyelvet magyarra-->
+<head> <!--böngészőnek ad utasításokat-->
+    <meta charset="UTF-8"> <!--karakterkódolás beállítása-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"> <!--külső (external) stíluslap beillesztése-->
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon"> <!--favicon beillesztése-->
+    <style>
+        h1 {
+            color: blue;
+        }
+    </style>
+    <title>Document</title> <!--böngésző címsorában megjelenő cím-->
+</head>
+<body> <!--a felhasználónak ad utasításokat-->
+    <h1></h1> <!--1-es szintű címsor, főcím-->
+    <h2></h2> - <h6></h6>
+    <h1 style="color: pink;"></h1>
+    <p></p> <!--bekezdés-->
+    <img src="" alt="" title=""> <!--kép beillesztése; src: forrásválasztó, forrás: 1. mappából (img/kep.jpg), 2. link; alt: ha nem jeleníthető meg a kép; title: ha az egér kurzort a kép felé viszem-->
+    <a href="https://..." target="_blank">LINK</a>
+    <a href="cica.html">NAVIGÁCIÓ saját oldalon</a>
+    <a href="#leiras">UGRÓPONT</a>
+    <br> <!--sortörés-->
+    <hr> <!--vízszintes vonal-->
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul> <!--számozatlan felsorolás, emmet: ul>li*5-->
+    <ol>
+        <li></li>
+        <li></li>
+    </ol> <!--számozott felsorolás-->
+    <ul class="cica" id="kutya">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul> <!--emmet: ul.cica#kutya>li*3-->
+    <table> <!--táblázat készítése-->
+        <caption></caption> <!--a táblázat címe-->
+        <thead> <!--a táblázat fejrésze / fejléce-->
+            <tr> <!--a táblázat sora-->
+                <th></th> <!--fejléc cella-->
+                <th colspan="2"></th> <!--colspan: oszlopokat von össze-->
+                <th rowspan="2"></th> <!--rowspan: sorokat von össze-->
+            </tr>
+        </thead>
+        <tbody> <!--a táblázat törzse-->
+            <tr>
+                <td></td> <!--adat cella-->
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+        <tfoot> <!--a táblázat lábrésze / lábléce-->
+
+        </tfoot>
+    </table>
+    table>tr*2>td*3 <!--egy 2 soros 3 oszlopos táblázat gyors kódja-->
+    <!--a td és th adja a táblázat oszlopait-->
+    <div></div> <!--keret-->
+    <b></b> vagy <strong></strong> <!--félkövérré teszi a szöveget-->
+    <i></i> vagy <em></em> <!--dőltté teszi a szöveget-->
+    <u></u> <!--aláhúzottá teszi a szöveget-->
+    <span></span> <!--egyedileg formázható a szöveg-->
+    <mark>újság</mark> <!--kijelölés sárga háttér fekete betűszín-->
+    <form action=""> <!--űrlap készítése-->
+        <fieldset> <!--részekre bontható általa az űrlap, pl.: személyes adatok rész, szegélyt rak az adott rész köré-->
+            <legend>Személyes adatok</legend> <!--az adott rész címének beállítása-->
+            <label for="nev">NÉV:</label> <!--elnevezés-->
+            <input type="text" name="nev" id="nev" placeholder="Vezetéknév Keresztnév"> <!--beviteli mező, sokféle típus van, egyedi azonosítóval a label összekapcsolható, a placeholderben beírt szöveg segítséget ad a felhasználónak az űrlap kitöltésében-->
+            <!--input type lehet:
+            - szöveg (text)
+            - jelölő négyzet (checkbox) - több választás lehetséges
+            - rádió gomb (radio) - egy választás lehetséges
+            - email cím (email)
+            - szám (number)
+            - dátum (date)
+            - jelszó (password)
+            - idő (time)
+            stb., DE én csak a fent leírtakat fogom kérdezni!!!-->
+            <button type="button">GOMB</button> <!--gomb-->
+            <!--gombot kétféleképpen lehet hozzáadni a weboldalhoz:
+            1. input "tag" type=submit (Küldés), type=reset(Visszaállítás), type=button (sima gomb esemény nélkül)
+            Ha beállítunk value-t (értéket), akkor csak azt fogja kiírni a gombra, amennyiben ezt kihagyjuk a böngésző a saját erre alkalmazott beállítását fogja használni az általad használt operációs rendszer nyelvén.
+            2. button "tag" type=submit (Küldés), type=reset(Visszaállítás), type=button (sima gomb esemény nélkül)-->
+            <label for="uzenet">Üzenet a szakácsnak:</label>
+            <textarea name="message" id="uzenet" cols="30" rows="10"></textarea> <!--szövegmező nagyobb terjedelmű szövegek írása esetén pl.: Üzenet a szakácsnak: Nem kérek rukkolát a pizzára!-->
+            <label for="auto">AUTÓK:</label>
+            <select name="cars" id="auto"> <!--lenyíló menüs választási lehetőség-->
+                <option value="ures"></option> <!--lenyíló menü eleme-->
+                <option value="audi">Audi</option>
+                <option value="bmw">BMW</option>
+                <option value="ford">Ford</option>
+                <option value="fiat">Fiat</option>
+            </select>
+        </fieldset>
+    </form>
+    <nav></nav> <!--navigációs menü kialakítására való-->
+    <header></header> <!--fejléc a body-n belül-->
+    <footer></footer> <!--lábléc a body-n belül-->
+    <p>P<sub>2</sub></p> <!--alsó index-->
+    <p>m<sup>2</sup></p> <!--felső index-->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/TmosmihCQe8?si=Lxro6X_xFgmbWjs9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> <!--videókat lehet beilleszteni weboldalra-->
+</body>
+</html>
